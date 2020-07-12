@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  mysqlsrv:
+    image: mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "q1w2e3"
+    volumes:
+      - ./mysqlconf:/etc/mysql/conf.d

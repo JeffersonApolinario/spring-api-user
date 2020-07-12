@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 @Entity
 public class User extends AbstractEntity {
     @Column
-    @NotEmpty
+    @NotEmpty(message = "The field name not has empty")
     @Size(min=3, message = "The Field name has minimum 3 characters")
     private String name;
 
